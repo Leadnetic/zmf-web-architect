@@ -1,30 +1,273 @@
 
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZMF Wirtschaftsberatung - Ihr Partner für Versicherungen & Finanzierungen</title>
-    <meta name="description" content="ZMF Wirtschaftsberatungsgesellschaft mbH - Seit über 25 Jahren Ihr kompetenter Partner für maßgeschneiderte Versicherungen und Finanzierungen in Bautzen." />
-    <meta name="author" content="ZMF Wirtschaftsberatungsgesellschaft mbH" />
-    <meta name="keywords" content="Versicherungen, Finanzierungen, Baufinanzierung, Versicherungsmakler, Bautzen, ZMF, Wirtschaftsberatung" />
+    <meta name="description" content="ZMF Wirtschaftsberatungsgesellschaft mbH - Seit über 25 Jahren Ihr kompetenter Partner für maßgeschneiderte Versicherungen und Finanzierungen in Bautzen.">
+    <meta name="keywords" content="Versicherungen, Finanzierungen, Baufinanzierung, Versicherungsmakler, Bautzen, ZMF, Wirtschaftsberatung">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4"/>
+                        <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c2.35 0 4.48.9 6.07 2.36"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <div class="logo-title">ZMF</div>
+                    <div class="logo-subtitle">Wirtschaftsberatung</div>
+                </div>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link active">Start</a>
+                <a href="ueber-uns.html" class="nav-link">Über uns</a>
+                <a href="versicherungen.html" class="nav-link">Versicherungen</a>
+                <a href="finanzierungen.html" class="nav-link">Finanzierungen</a>
+                <a href="kontakt.html" class="nav-link">Kontakt</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-    <meta property="og:title" content="ZMF Wirtschaftsberatung - Versicherungen & Finanzierungen" />
-    <meta property="og:description" content="Seit über 25 Jahren Ihr kompetenter Partner für maßgeschneiderte Versicherungen und Finanzierungen." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://zmf-online.de" />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200&h=630&fit=crop" />
+    <!-- Hero Section -->
+    <section class="hero parallax-bg">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Mit über <span class="highlight">25 Jahren</span> Erfahrung an Ihrer Seite
+                </h1>
+                <p class="hero-subtitle">
+                    Ihr Partner in punkto maßgeschneiderte Versicherungen und Finanzierungen
+                </p>
+                <p class="hero-description">
+                    Ihr leistungsstarker Versicherungsmakler mit kompetenter, unabhängiger Beratung
+                </p>
+                <div class="hero-buttons">
+                    <a href="kontakt.html" class="btn btn-primary">Beratung anfragen</a>
+                    <a href="versicherungen.html" class="btn btn-secondary">Unsere Leistungen</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg-elements">
+            <div class="floating-element element-1"></div>
+            <div class="floating-element element-2"></div>
+            <div class="floating-element element-3"></div>
+        </div>
+    </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ZMF Wirtschaftsberatung" />
-    <meta name="twitter:description" content="Ihr Partner für Versicherungen & Finanzierungen" />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200&h=630&fit=crop" />
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>100% Unabhängigkeit</h3>
+                    <p>Objektive, kundenorientierte Beratung – die Interessen und Wünsche unserer Kunden stehen im Mittelpunkt</p>
+                </div>
 
-    <link rel="canonical" href="https://zmf-online.de" />
-  </head>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Erstklassiges Preis-Leistungsverhältnis</h3>
+                    <p>Mit über 70 Versicherungsgesellschaften bieten wir spezielle Sonderkonditionen und Rabatte</p>
+                </div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Beste Beratung und Betreuung</h3>
+                    <p>Individuelle Versicherungslösungen und eine langfristige, partnerschaftliche Beratung</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Seit über 25 Jahren erfolgreich</h3>
+                    <p>Mehr als 10.000 Privat- und Firmenkunden vertrauen auf unsere Expertise</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <h3>Kompetenter Schadenservice</h3>
+                    <p>Unkomplizierte und schnelle Behandlung von Schadenfällen</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polygon points="16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88"/>
+                        </svg>
+                    </div>
+                    <h3>Regional und überregional</h3>
+                    <p>Wir sind für Sie regional und überregional am Markt tätig</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Unsere Leistungen</h2>
+            
+            <div class="services-grid">
+                <div class="service-category" data-aos="fade-right">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3>Privatkunden</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li>Risikoanalyse zur Ermittlung des persönlichen Versicherungsbedarfs</li>
+                        <li>Maßgeschneiderte Lösungen in allen Versicherungsbereichen</li>
+                        <li>Vertrauliche und objektive Beratung</li>
+                        <li>Finanzanalyse zur Ermittlung des Vorsorgebedarfs</li>
+                    </ul>
+                    <a href="versicherungen.html" class="btn btn-outline">Mehr erfahren</a>
+                </div>
+
+                <div class="service-category" data-aos="fade-left">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 21h18"/>
+                                <path d="M5 21V7l8-4v18"/>
+                                <path d="M19 21V11l-6-4"/>
+                            </svg>
+                        </div>
+                        <h3>Firmenkunden</h3>
+                    </div>
+                    <ul class="service-list">
+                        <li>Individuelle Bedarfsermittlungen zur Risikovermeidung</li>
+                        <li>Kompetente Risikoanalysen für umfassende Konzepte</li>
+                        <li>Großes Netzwerk an Produktpartnern</li>
+                        <li>Kompetentes Schadenmanagement</li>
+                    </ul>
+                    <a href="versicherungen.html" class="btn btn-outline">Mehr erfahren</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <blockquote class="quote" data-aos="fade-up">
+                <p>"Wer seine Sache nicht mag, den mag sein Geschäft auch nicht." – 
+                <span class="highlight">Wir lieben unsere Sache!</span></p>
+                <cite>William Hazlitt (1778-1830, englischer Schriftsteller, Theaterkritiker und Philosoph)</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"/>
+                                <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c2.35 0 4.48.9 6.07 2.36"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <div class="logo-title">ZMF</div>
+                            <div class="logo-subtitle">Wirtschaftsberatungsgesellschaft mbH</div>
+                        </div>
+                    </div>
+                    <p>Seit über 25 Jahren Ihr leistungsstarker Versicherungsmakler mit kompetenter, unabhängiger Beratung für mehr als 10.000 zufriedene Kunden.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>August-Bebel-Platz 14, 02625 Bautzen</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Start</a></li>
+                        <li><a href="ueber-uns.html">Über uns</a></li>
+                        <li><a href="versicherungen.html">Versicherungen</a></li>
+                        <li><a href="finanzierungen.html">Finanzierungen</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Rechtliches</h3>
+                    <ul class="footer-links">
+                        <li><a href="#erstinformation">Erstinformation</a></li>
+                        <li><a href="#impressum">Impressum</a></li>
+                        <li><a href="#datenschutz">Datenschutz</a></li>
+                        <li><a href="#esg-info">ESG-Info</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <p>Wir freuen uns darauf, Sie kennenzulernen und stehen Ihnen gerne für eine kostenlose und unverbindliche Beratung zur Verfügung.</p>
+                    <a href="kontakt.html" class="btn btn-primary">Kontakt aufnehmen</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 ZMF Wirtschaftsberatungsgesellschaft mbH · Alle Rechte vorbehalten</p>
+                <p>Webdesign: Premium Digital Solutions</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
