@@ -56,50 +56,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check on scroll
     window.addEventListener('scroll', animateOnScroll);
 
-    // Contact form handling
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-            
-            // Basic validation
-            if (!data.name || !data.email || !data.message || !data.privacy) {
-                alert('Bitte füllen Sie alle Pflichtfelder aus und stimmen Sie der Datenschutzerklärung zu.');
-                return;
-            }
-
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(data.email)) {
-                alert('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
-                return;
-            }
-
-            // Simulate form submission
-            const submitButton = contactForm.querySelector('button[type="submit"]');  
-            const originalText = submitButton.textContent;
-            
-            submitButton.textContent = 'Wird gesendet...';
-            submitButton.disabled = true;
-
-            // Simulate API call
-            setTimeout(() => {
-                alert('Vielen Dank für Ihre Nachricht! Wir werden uns innerhalb von 24 Stunden bei Ihnen melden.');
-                contactForm.reset();
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-            }, 2000);
-        });
-    }
-
-    // Add loading animation for buttons
+    // Add ripple effect to buttons
     document.querySelectorAll('.btn').forEach(button => {
         button.addEventListener('click', function(e) {
-            if (this.classList.contains('btn-primary')) {
+            if (this.classList.contains('btn-primary') || this.classList.contains('btn-secondary')) {
                 // Add ripple effect
                 const ripple = document.createElement('span');
                 const rect = this.getBoundingClientRect();
@@ -121,31 +81,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add ripple effect styles
-    const rippleStyle = document.createElement('style');
-    rippleStyle.textContent = `
-        .btn {
-            position: relative;
-            overflow: hidden;
+    // Create scroll to top button
+    const scrollToTopBtn = document.createElement('button');
+    scrollToTopBtn.innerHTML = '↑';
+    scrollToTopBtn.className = 'scroll-to-top';
+    scrollToTopBtn.setAttribute('aria-label', 'Nach oben scrollen');
+    document.body.appendChild(scrollToTopBtn);
+
+    // Show/hide scroll to top button
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
         }
-        
-        .ripple {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.4);
-            transform: scale(0);
-            animation: ripple-animation 0.6s linear;
-            pointer-events: none;
-        }
-        
-        @keyframes ripple-animation {
-            to {
-                transform: scale(4);
-                opacity: 0;
-            }
-        }
-    `;
-    document.head.appendChild(rippleStyle);
+    });
+
+    // Scroll to top functionality
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 
     // Add intersection observer for better performance
     if ('IntersectionObserver' in window) {
@@ -164,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Add parallax effect to hero background elements
+    // Add parallax effect to floating elements
     const floatingElements = document.querySelectorAll('.floating-element');
     if (floatingElements.length > 0) {
         window.addEventListener('scroll', () => {
@@ -177,102 +135,4 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-
-    // Add form field animations
-    const formInputs = document.querySelectorAll('input, textarea, select');
-    formInputs.forEach(input => {
-        input.addEventListener('focus', function() {
-            this.parentElement.classList.add('focused');
-        });
-        
-        input.addEventListener('blur', function() {
-            if (!this.value) {
-                this.parentElement.classList.remove('focused');
-            }
-        });
-        
-        // Check if already has value on load
-        if (input.value) {
-            input.parentElement.classList.add('focused');
-        }
-    });
-
-    // Add form focus styles
-    const formStyle = document.createElement('style');
-    formStyle.textContent = `
-        .form-group {
-            position: relative;
-        }
-        
-        .form-group.focused label {
-            color: #10b981;
-            transform: translateY(-2px);
-        }
-        
-        .form-group label {
-            transition: all 0.3s ease;
-        }
-    `;
-    document.head.appendChild(formStyle);
-});
-
-// Add scroll-to-top functionality
-document.addEventListener('DOMContentLoaded', function() {
-    // Create scroll to top button
-    const scrollToTopBtn = document.createElement('button');
-    scrollToTopBtn.innerHTML = '↑';
-    scrollToTopBtn.className = 'scroll-to-top';
-    scrollToTopBtn.setAttribute('aria-label', 'Nach oben scrollen');
-    document.body.appendChild(scrollToTopBtn);
-
-    // Add styles for scroll to top button
-    const scrollBtnStyle = document.createElement('style');
-    scrollBtnStyle.textContent = `
-        .scroll-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            font-size: 20px;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 1000;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-        }
-        
-        .scroll-to-top:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
-        }
-        
-        .scroll-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-    `;
-    document.head.appendChild(scrollBtnStyle);
-
-    // Show/hide scroll to top button
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            scrollToTopBtn.classList.add('visible');
-        } else {
-            scrollToTopBtn.classList.remove('visible');
-        }
-    });
-
-    // Scroll to top functionality
-    scrollToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
 });
