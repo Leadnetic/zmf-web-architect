@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             // Simulate form submission
-            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const submitButton = contactForm.querySelector('button[type="submit"]');  
             const originalText = submitButton.textContent;
             
             submitButton.textContent = 'Wird gesendet...';
@@ -95,50 +95,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 2000);
         });
     }
-
-    // Add mobile menu styles
-    const style = document.createElement('style');
-    style.textContent = `
-        @media (max-width: 768px) {
-            .nav-menu {
-                position: fixed;
-                top: 80px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 80px);
-                background: rgba(255, 255, 255, 0.98);
-                backdrop-filter: blur(10px);
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-                padding-top: 2rem;
-                transition: left 0.3s ease;
-                z-index: 999;
-            }
-            
-            .nav-menu.active {
-                left: 0;
-            }
-            
-            .nav-link {
-                padding: 1rem 0;
-                font-size: 1.1rem;
-            }
-            
-            .nav-toggle.active span:nth-child(1) {
-                transform: rotate(-45deg) translate(-5px, 6px);
-            }
-            
-            .nav-toggle.active span:nth-child(2) {
-                opacity: 0;
-            }
-            
-            .nav-toggle.active span:nth-child(3) {
-                transform: rotate(45deg) translate(-5px, -6px);
-            }
-        }
-    `;
-    document.head.appendChild(style);
 
     // Add loading animation for buttons
     document.querySelectorAll('.btn').forEach(button => {

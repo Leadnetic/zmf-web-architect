@@ -584,7 +584,7 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 3rem;
-    margin-bottom: 4rem;
+    margin: 4rem 0;
 }
 
 .insurance-category {
@@ -597,7 +597,7 @@ a:hover {
 
 .category-header {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
 }
 
 .category-icon {
@@ -619,10 +619,10 @@ a:hover {
     background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
 }
 
-.insurance-category h2 {
-    font-size: 1.75rem;
+.category-header h2 {
+    font-size: 2rem;
     color: #1f2937;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .category-header p {
@@ -640,13 +640,13 @@ a:hover {
     align-items: flex-start;
     gap: 1rem;
     padding: 1.5rem;
-    background: #f8fafc;
     border-radius: 12px;
     transition: all 0.3s ease;
+    border: 1px solid #f3f4f6;
 }
 
 .insurance-service:hover {
-    background: #f1f5f9;
+    background: #f8fafc;
     transform: translateX(5px);
 }
 
@@ -671,10 +671,9 @@ a:hover {
 .service-content p {
     color: #6b7280;
     font-size: 0.95rem;
-    margin: 0;
 }
 
-/* Features Section */
+/* Features Section for Insurance Page */
 .features-section {
     margin: 4rem 0;
 }
@@ -683,12 +682,11 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
-    margin-top: 3rem;
 }
 
 .features-section .feature-card {
-    text-align: left;
     padding: 2.5rem;
+    text-align: left;
 }
 
 .features-section .feature-card h3 {
@@ -702,7 +700,7 @@ a:hover {
 }
 
 .features-section .feature-card li {
-    padding: 0.75rem 0;
+    padding: 0.5rem 0;
     color: #4b5563;
     position: relative;
     padding-left: 1.5rem;
@@ -716,24 +714,90 @@ a:hover {
     font-weight: bold;
 }
 
-/* Services Overview */
-.services-overview {
+/* Financing Services */
+.financing-services {
     margin: 4rem 0;
 }
 
-.services-overview .services-grid {
+.financing-details {
+    margin-top: 2rem;
+}
+
+.financing-benefits {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.financing-benefits h4 {
+    font-size: 1.1rem;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.benefit {
+    background: #f0f9ff;
+    color: #0369a1;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Process Section */
+.process-section {
+    margin: 4rem 0;
+}
+
+.process-steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
     margin-top: 3rem;
+}
+
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.step-content h3 {
+    font-size: 1.1rem;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.step-content p {
+    color: #6b7280;
+    font-size: 0.95rem;
 }
 
 /* Contact Section */
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 3rem;
-    margin-bottom: 4rem;
+    margin: 3rem 0;
 }
 
 .contact-info-section h2,
@@ -755,18 +819,19 @@ a:hover {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
-    margin-bottom: 2rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #f3f4f6;
 }
 
 .contact-item:last-child {
-    margin-bottom: 0;
+    border-bottom: none;
 }
 
 .contact-icon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background: linear-gradient(135deg, #10b981 0%, #047857 100%);
-    border-radius: 12px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -839,11 +904,6 @@ a:hover {
     border-color: #10b981;
 }
 
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
 .checkbox-group {
     display: flex;
     align-items: flex-start;
@@ -854,9 +914,9 @@ a:hover {
     display: flex;
     align-items: flex-start;
     gap: 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
     cursor: pointer;
-    font-size: 0.9rem;
-    line-height: 1.4;
 }
 
 .checkbox-label input[type="checkbox"] {
@@ -869,23 +929,9 @@ a:hover {
     height: 18px;
     border: 2px solid #e5e7eb;
     border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     flex-shrink: 0;
     margin-top: 2px;
-}
-
-.checkbox-label input[type="checkbox"]:checked + .checkmark {
-    background: #10b981;
-    border-color: #10b981;
-}
-
-.checkbox-label input[type="checkbox"]:checked + .checkmark::after {
-    content: '✓';
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
 }
 
 /* Benefits Section */
@@ -954,7 +1000,6 @@ a:hover {
 .footer-section h3 {
     color: white;
     margin-bottom: 1.5rem;
-    font-size: 1.25rem;
 }
 
 .footer-logo {
@@ -964,21 +1009,9 @@ a:hover {
     margin-bottom: 1.5rem;
 }
 
-.footer-logo .logo-icon {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.footer-logo .logo-title {
-    color: white;
-}
-
-.footer-logo .logo-subtitle {
-    color: #9ca3af;
-}
-
 .footer-section p {
     color: #d1d5db;
-    margin-bottom: 1.5rem;
+    line-height: 1.7;
 }
 
 .footer-links {
@@ -986,7 +1019,7 @@ a:hover {
 }
 
 .footer-links li {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 .footer-links a {
@@ -995,31 +1028,33 @@ a:hover {
 }
 
 .footer-links a:hover {
-    color: #667eea;
+    color: white;
 }
 
-.footer .contact-info {
+.contact-info {
     margin-top: 1.5rem;
 }
 
-.footer .contact-item {
+.contact-item {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    color: #d1d5db;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
 }
 
-.footer .contact-item svg {
-    width: 20px;
-    height: 20px;
-    color: #667eea;
+.contact-item svg {
+    color: #10b981;
+    flex-shrink: 0;
+}
+
+.contact-item span {
+    color: #d1d5db;
 }
 
 .footer-bottom {
-    text-align: center;
-    padding-top: 3rem;
     border-top: 1px solid #374151;
+    padding-top: 2rem;
+    text-align: center;
     color: #9ca3af;
 }
 
@@ -1027,22 +1062,67 @@ a:hover {
     margin-bottom: 0.5rem;
 }
 
+/* AOS Animation Classes */
+[data-aos] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
     .nav-menu {
-        display: none;
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 2rem;
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-link {
+        padding: 1rem 0;
+        font-size: 1.1rem;
     }
     
     .nav-toggle {
         display: flex;
     }
     
-    .hero-title {
-        font-size: 2.5rem;
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
     }
     
-    .hero-subtitle {
-        font-size: 1.25rem;
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
     }
     
     .page-title {
@@ -1058,10 +1138,18 @@ a:hover {
         align-items: center;
     }
     
-    .features-grid,
-    .services-grid,
-    .values-grid,
-    .insurance-categories,
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .insurance-categories {
+        grid-template-columns: 1fr;
+    }
+    
     .contact-grid {
         grid-template-columns: 1fr;
     }
@@ -1070,24 +1158,21 @@ a:hover {
         grid-template-columns: 1fr;
     }
     
-    .feature-card,
-    .service-category,
-    .content-card,
-    .contact-card,
-    .contact-form {
-        padding: 2rem;
+    .benefits-grid {
+        grid-template-columns: 1fr;
     }
     
-    .insurance-category {
-        padding: 2rem;
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
-    }
-    
     .hero-title {
         font-size: 2rem;
     }
@@ -1107,42 +1192,4 @@ a:hover {
     .contact-form {
         padding: 1.5rem;
     }
-    
-    .insurance-category {
-        padding: 1.5rem;
-    }
-    
-    .btn {
-        padding: 0.6rem 1.25rem;
-        font-size: 0.9rem;
-    }
-}
-
-/* Animation Classes */
-[data-aos] {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-[data-aos].aos-animate {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-[data-aos="fade-up"] {
-    transform: translateY(30px);
-}
-
-[data-aos="fade-right"] {
-    transform: translateX(-30px);
-}
-
-[data-aos="fade-left"] {
-    transform: translateX(30px);
-}
-
-[data-aos="fade-right"].aos-animate,
-[data-aos="fade-left"].aos-animate {
-    transform: translateX(0);
 }
